@@ -13,35 +13,23 @@ interface EducationItem {
 
 const education: EducationItem[] = [
   {
-    degree: 'Master of Science in Computer Science',
-    institution: 'Stanford University',
-    period: '2016 - 2018',
-    description: 'Specialized in Software Engineering and Artificial Intelligence.',
+    degree: 'B.A.Sc. - Mechatronics Engineering',
+    institution: 'University of Waterloo',
+    period: '2020 - 2025',
+    description: 'Bachelor of Applied Science in Mechatronics Engineering with Software Engineering Option.',
     achievements: [
       'GPA: 3.9/4.0',
-      'Teaching Assistant for Data Structures and Algorithms',
-      'Research on Machine Learning applications in web development',
-    ],
-  },
-  {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of California, Berkeley',
-    period: '2012 - 2016',
-    description: 'Focused on web technologies and database systems.',
-    achievements: [
-      'GPA: 3.8/4.0',
-      'Dean\'s List all semesters',
-      'President of Computer Science Student Association',
+      'President\'s Scholarship of Distinction',
     ],
   },
 ];
 
-const certifications = [
-  'AWS Certified Solutions Architect',
-  'Google Professional Cloud Developer',
-  'MongoDB Certified Developer',
-  'React Advanced Certification',
-];
+// const certifications = [
+//   'AWS Certified Solutions Architect',
+//   'Google Professional Cloud Developer',
+//   'MongoDB Certified Developer',
+//   'React Advanced Certification',
+// ];
 
 export function Education() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
@@ -103,7 +91,7 @@ export function Education() {
           ))}
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className="bg-white rounded-lg p-8 shadow-md mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -129,20 +117,7 @@ export function Education() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        <motion.div
-          className="bg-white rounded-lg p-8 shadow-md"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
-          <div className="flex items-center gap-2 mb-6">
-            <Code size={24} className="text-blue-600" />
-            <h3 className="text-2xl">Technical Skills</h3>
-          </div>
-          <SkillBars />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

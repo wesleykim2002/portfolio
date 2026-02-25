@@ -16,7 +16,7 @@ export default function App() {
       </main>
       <footer className="bg-gray-900 text-white py-8 text-center">
         <p className="text-gray-400">
-          © 2026 Your Name. All rights reserved.
+          © 2026 Wesley Kim. All rights reserved.
         </p>
       </footer>
     </div>
