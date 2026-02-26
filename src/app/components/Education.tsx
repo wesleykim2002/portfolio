@@ -33,7 +33,7 @@ export function Education() {
               </div>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
-              <Calendar size={18} />
+              <Calendar size={18} /> 
               <span>{portfolio.education.period}</span>
             </div>
           </div>
