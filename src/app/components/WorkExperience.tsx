@@ -1,10 +1,15 @@
-import { Briefcase, Calendar } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Briefcase, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from './useInView';
 import { portfolio } from '../data/portfolio';
 
 export function WorkExperience() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
+  const [showAll, setShowAll] = useState(false);
+  const visibleExperiences = showAll
+    ? portfolio.experiences
+    : portfolio.experiences.slice(0, 3);
 
   return (
     <section id="experience" className="experience-section" ref={ref}>
@@ -19,7 +24,7 @@ export function WorkExperience() {
         </motion.h2>
         
         <div className="experience-list">
-          {portfolio.experiences.map((exp, index) => (
+          {visibleExperiences.map((exp, index) => (
             <motion.div
               key={index}
               className="experience-card"
@@ -31,15 +36,17 @@ export function WorkExperience() {
                 <div className="experience-role">
                   <div className="experience-role-line">
                     <h3 className="experience-position">{exp.position}</h3>
-                    {exp.type === 'fulltime' && (
-                      <span className="experience-badge">
-                        Full-time
-                      </span>
-                    )}
+                    <span className="experience-badge">
+                      {exp.type === 'fulltime' ? 'Full-time' : 'Internship'}
+                    </span>
                   </div>
                   <div className="experience-company">
                     <Briefcase size={16} />
                     <span className="experience-company-name">{exp.company}</span>
+                  </div>
+                  <div className="experience-location">
+                    <MapPin size={16} />
+                    <span>{exp.location}</span>
                   </div>
                 </div>
                 <div className="experience-period">
@@ -48,10 +55,8 @@ export function WorkExperience() {
                 </div>
               </div>
               
-              <p className="experience-description">{exp.description}</p>
-              
               <ul className="experience-achievements">
-                {exp.achievements.map((achievement, i) => (
+                {exp.description.map((description, i) => (
                   <motion.li 
                     key={i} 
                     className="experience-achievement"
@@ -60,13 +65,25 @@ export function WorkExperience() {
                     transition={{ delay: index * 0.08 + i * 0.05 + 0.2 }}
                   >
                     <span className="experience-bullet">•</span>
-                    <span className="experience-achievement-text">{achievement}</span>
+                    <span className="experience-achievement-text">{description}</span>
                   </motion.li>
                 ))}
               </ul>
             </motion.div>
           ))}
         </div>
+
+        {portfolio.experiences.length > 3 && (
+          <div className="experience-actions">
+            <button
+              type="button"
+              className="experience-toggle"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              {showAll ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

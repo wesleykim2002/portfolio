@@ -11,8 +11,8 @@ export type Experience = {
   company: string;
   position: string;
   period: string;
-  description: string;
-  achievements: string[];
+  location: string;
+  description: string[];
   type: 'fulltime' | 'internship';
 };
 
@@ -98,86 +98,88 @@ export const portfolio = {
   // ],
   experiences: [
     {
-      company: 'Tech Company Inc.',
-      position: 'Full Stack Developer',
-      period: 'Jan 2024 - Present',
-      description: 'Leading development of scalable web applications and mentoring junior developers.',
-      achievements: [
-        'Built a real-time collaboration platform serving 50K+ users',
-        'Improved application performance by 40% through optimization',
-        'Led a team of 5 developers in delivering key features',
+      company: 'Achievers',
+      position: 'Software Engineer',
+      period: 'Nov 2025 - Present',
+      location: 'Toronto, ON',
+      description: [
+        'Shipped end-to-end recognition & approvals features (React, GraphQL, TypeScript), improving admin workflows.',
+        'Optimized BigQuery reporting by refactoring temporal joins in YAML templates.',
       ],
       type: 'fulltime',
     },
     {
-      company: 'Startup Solutions',
-      position: 'Software Engineering Intern',
-      period: 'Summer 2023',
-      description: 'Developed features for customer-facing web applications.',
-      achievements: [
-        'Implemented user authentication system with OAuth integration',
-        'Built responsive UI components using React and TypeScript',
-        'Collaborated with cross-functional teams in Agile environment',
+      company: 'Deliverect',
+      position: 'Software Software Developer',
+      period: 'May 2024 - Aug 2024',
+      location: 'Toronto, ON',
+      description: [
+        'Optimized POS API integrations (Flask, Eve), improving compatibility with Shopify, Square, DoorDash, and Toast.',
+        'Implemented API health checks (key validation, request monitoring) to improve reliability.',
+        'Improved backend scheduling and error handling, increasing system reliability across integrations.',
+        'Collaborated with PMs and partners to resolve API incompatibilities and deliver integration solutions.',
+        'Built menu validation tools ensuring API compliance (MongoDB, Grafana).',
       ],
       type: 'internship',
     },
     {
-      company: 'Tech Innovations Corp',
-      position: 'Backend Engineering Intern',
-      period: 'Summer 2022',
-      description: 'Worked on API development and database optimization.',
-      achievements: [
-        'Designed and implemented RESTful APIs serving 10K+ requests/day',
-        'Optimized database queries reducing response time by 50%',
-        'Created comprehensive API documentation',
+      company: 'Martinrea International',
+      position: 'Back End Developer',
+      period: 'Sep 2023 - Dec 2023',
+      location: 'Vaughan, ON',
+      description: [
+        'Built a Python-based web app generator that outputs Django backend + frontend via Jinja2 templates.',
+        'Implemented SSL and OAuth for secure server communication and client authentication.',
+        'Designed Django API architecture with SMTP-based user authentication and admin management.',
+        'Built Python scripts for image processing (PIL) and CSV database ingestion.',
       ],
       type: 'internship',
     },
     {
-      company: 'Digital Media Co',
-      position: 'Frontend Development Intern',
-      period: 'Summer 2021',
-      description: 'Built responsive web interfaces and interactive features.',
-      achievements: [
-        'Developed 5+ reusable React components for design system',
-        'Implemented pixel-perfect designs from Figma mockups',
-        'Fixed 20+ bugs improving user experience',
+      company: 'Aisha Comfortable Coliving',
+      position: 'Full Stack Developer',
+      period: 'Jan 2023 - May 2023',
+      location: 'Ottawa, ON',
+      description: [
+        'Designed and built Django backend architecture for a home services platform.',
+        'Configured AWS IAM policies and S3 buckets for secure file uploads.',
+        'Integrated REST APIs with frontend using Axios and Redux (Material UI).',
       ],
       type: 'internship',
     },
     {
-      company: 'Cloud Services Inc',
-      position: 'Software Engineering Intern',
-      period: 'Winter 2021',
-      description: 'Contributed to cloud infrastructure and automation tools.',
-      achievements: [
-        'Automated deployment processes reducing manual work by 70%',
-        'Wrote unit tests achieving 85% code coverage',
-        'Participated in code reviews and pair programming sessions',
+      company: 'UKG',
+      position: 'Software Engineering',
+      period: 'May 2022 - Aug 2022',
+      location: 'Toronto, ON',
+      description: [
+        'Automated E2E testing with Selenium for recruiting platform frontend.',
+        'Resolved TypeScript frontend bugs improving recruiter-applicant communication.',
+        'Validated SMS functionality using MongoDB Atlas data analysis.',
       ],
       type: 'internship',
     },
     {
-      company: 'Data Analytics Firm',
-      position: 'Web Development Intern',
-      period: 'Summer 2020',
-      description: 'Created data visualization dashboards and reporting tools.',
-      achievements: [
-        'Built interactive dashboards using React and Chart.js',
-        'Integrated third-party analytics APIs',
-        'Improved dashboard load time by 35%',
+      company: 'JSI',
+      position: 'Software Developer',
+      period: 'Sep 2021 - Dec 2021',
+      location: 'Ottawa, ON',
+      description: [
+        'Built Java tool converting Apache Solr queries (XML → JSON) for improved readability.',
+        'Redesigned JavaFX GUI to improve usability and information display.',
+        'Packaged translator as plugin using Jenkins CI and Gradle builds.',
       ],
       type: 'internship',
     },
     {
-      company: 'Mobile App Startup',
-      position: 'Developer Intern',
-      period: 'Winter 2020',
-      description: 'Assisted in mobile and web application development.',
-      achievements: [
-        'Developed features for iOS and Android applications',
-        'Fixed critical bugs and improved app stability',
-        'Contributed to sprint planning and retrospectives',
+      company: 'Oxilight',
+      position: 'Hardware Engineer',
+      period: 'Jan 2021 - Apr 2021',
+      location: 'Toronto, ON',
+      description: [
+        'Redesigned PCB in KiCAD (test points, voltage regulator, level shifters) to improve functionality and debugging.',
+        'Improved wearable vitals device durability through mechanical cable redesign.',
+        'Generated BOMs in Excel to track inventory and costs.',
       ],
       type: 'internship',
     },
