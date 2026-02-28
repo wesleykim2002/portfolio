@@ -10,8 +10,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  
+
   base: '/wesfolio/',
+
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
 
   resolve: {
     alias: {

@@ -37,10 +37,12 @@ npm run build
 
 ## Deploy (GitHub Pages)
 
-If deploying to GitHub Pages, make sure the Vite base path is configured and run:
+This repo is configured to build into `docs/` for GitHub Pages (main / docs). Make sure GitHub Pages is set to **main** / **/docs**.
+
+Build with:
 
 ```bash
 npm run build
 ```
 
-Then publish the `dist/` folder using your preferred GitHub Pages workflow.
+Then commit and push the generated `docs/` folder.
