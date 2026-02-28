@@ -232,6 +232,77 @@
   .about-link {
     @apply p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors;
   }
+  .experience-section {
+    @apply min-h-screen py-20 px-6;
+  }
+
+  .experience-container {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .experience-title {
+    @apply text-4xl mb-12 text-center;
+  }
+
+  .experience-list {
+    @apply space-y-6;
+  }
+
+  .experience-card {
+    @apply bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500;
+  }
+
+  .experience-header {
+    @apply flex flex-col md:flex-row md:items-start md:justify-between mb-3;
+  }
+
+  .experience-role {
+    @apply flex-1;
+  }
+
+  .experience-role-line {
+    @apply flex items-center gap-2 mb-1;
+  }
+
+  .experience-position {
+    @apply text-xl text-blue-600;
+  }
+
+  .experience-badge {
+    @apply px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full;
+  }
+
+  .experience-company {
+    @apply flex items-center gap-2 text-gray-700 mb-2;
+  }
+
+  .experience-company-name {
+    @apply font-medium;
+  }
+
+  .experience-period {
+    @apply flex items-center gap-2 text-gray-600 text-sm mt-2 md:mt-0;
+  }
+
+  .experience-description {
+    @apply text-gray-700 mb-3 text-sm;
+  }
+
+  .experience-achievements {
+    @apply space-y-1.5;
+  }
+
+  .experience-achievement {
+    @apply flex items-start gap-2 text-sm;
+  }
+
+  .experience-bullet {
+    @apply text-blue-600 mt-0.5;
+  }
+
+  .experience-achievement-text {
+    @apply text-gray-700;
+  }
 }
 
 @layer utilities {
