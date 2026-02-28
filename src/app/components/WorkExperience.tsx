@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { MapPin, Briefcase, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from './useInView';
@@ -10,6 +10,18 @@ export function WorkExperience() {
   const visibleExperiences = showAll
     ? portfolio.experiences
     : portfolio.experiences.slice(0, 3);
+
+  const handleToggle = () => {
+    if (showAll) {
+      setShowAll(false);
+      requestAnimationFrame(() => {
+        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return;
+    }
+
+    setShowAll(true);
+  };
 
   return (
     <section id="experience" className="experience-section" ref={ref}>
@@ -78,7 +90,7 @@ export function WorkExperience() {
             <button
               type="button"
               className="experience-toggle"
-              onClick={() => setShowAll((prev) => !prev)}
+              onClick={handleToggle}
             >
               {showAll ? 'Show Less' : 'Show More'}
             </button>
