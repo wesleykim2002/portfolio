@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "description": "Personal portfolio site",
-  "homepage": "https://wesleykim2002.github.io/wesfolio/",
   "type": "module",
   "scripts": {
     "build": "vite build",

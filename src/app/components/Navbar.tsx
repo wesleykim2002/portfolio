@@ -82,7 +82,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-inner">
-          <a href="/wesfolio/" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             {portfolio.person.name}
           </a>
 
@@ -91,7 +91,7 @@ export function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.id}
-                href={`#${item.id}`}
+                href={`/#${item.id}`}
                 onClick={() => {
                   isClickLockedRef.current = true;
                   setActiveSection(item.id);
@@ -123,7 +123,7 @@ export function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.id}
-                href={`#${item.id}`}
+                href={`/#${item.id}`}
                 onClick={() => {
                   isClickLockedRef.current = true;
                   setActiveSection(item.id);
