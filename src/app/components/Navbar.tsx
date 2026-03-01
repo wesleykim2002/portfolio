@@ -5,8 +5,8 @@ import { portfolio } from '../data/portfolio';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const [isDark, setIsDark] = useState(false);
   const isClickLockedRef = useRef(false);
+  const baseUrl = import.meta.env.BASE_URL;
 
   const navItems = [
     { id: 'about', label: 'About' },
@@ -15,20 +15,6 @@ export function Navbar() {
     { id: 'projects', label: 'Projects' },
     { id: 'education', label: 'Education' },
   ];
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark =
-      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldUseDark = storedTheme ? storedTheme === 'dark' : prefersDark;
-    setIsDark(shouldUseDark);
-    document.documentElement.classList.toggle('dark', shouldUseDark);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }, [isDark]);
 
   useEffect(() => {
     const syncFromHash = () => {
@@ -82,7 +68,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-inner">
-          <a href="/" className="navbar-brand">
+          <a href={baseUrl} className="navbar-brand">
             {portfolio.person.name}
           </a>
 
@@ -91,7 +77,7 @@ export function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.id}
-                href={`/#${item.id}`}
+                href={`${baseUrl}#${item.id}`}
                 onClick={() => {
                   isClickLockedRef.current = true;
                   setActiveSection(item.id);
@@ -123,7 +109,7 @@ export function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.id}
-                href={`/#${item.id}`}
+                href={`${baseUrl}#${item.id}`}
                 onClick={() => {
                   isClickLockedRef.current = true;
                   setActiveSection(item.id);
