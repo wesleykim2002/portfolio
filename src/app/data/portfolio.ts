@@ -110,7 +110,7 @@ export const portfolio = {
     },
     {
       company: 'Deliverect',
-      position: 'Software Software Developer',
+      position: 'Software Developer',
       period: 'May 2024 - Aug 2024',
       location: 'Toronto, ON',
       description: [
